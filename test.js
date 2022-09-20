@@ -8,7 +8,7 @@ describe('lol', function() {
   let driver
   let vars
   beforeEach(async function() {
-    driver = await new Builder().forBrowser('chrome').setChromeOptions(new chrome.Options().headless()).build()
+    driver = await new Builder().forBrowser('chrome').setChromeOptions(new chrome.Options().headless().addArguments("--no-sandbox")).build()
     vars = {}
   })
   afterEach(async function() {
